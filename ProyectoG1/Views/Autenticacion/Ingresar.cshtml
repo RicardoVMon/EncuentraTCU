@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutExterno.cshtml";
+}
+
+<nav class="navbar navbar-dark navbar-extend p-2" style="background-color: #1A2035;">
+    <div class="container-fluid">
+        <a class="navbar-brand fs-4 fw-bold" href="@Url.Action("Ingresar","Autenticacion")">
+            <i class="fa-solid fa-hand-holding-heart mx-2"></i> Proyectos reales, progreso para todos.
+        </a>
+    </div>
+</nav>
+
+<section class="container-fluid d-flex flex-grow-1 px-0">
+    <div class="col">
+        <img src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" style="object-fit: cover; height: 100%">
+    </div>
+    <div class="col d-flex align-items-center">
+        <div class="container-fluid d-flex flex-column">
+            <form class="pb-4 border-bottom px-5" action="" method="POST">
+                <div class="text-center fw-bold" style="font-size: 10vh; color: #1F283E;">EncuentraTCU</div>
+                <h2 class="mb-5 text-center" style="color: #1F283E;">Ingreso a Sistema</h2>
+
+                <div class="form-group form-floating mb-4">
+                    <input type="text" class="form-control" placeholder="Cédula" name="cedula" id="cedula" required />
+                    <label class="form-label">Cédula (Física o Jurídica)</label>
+                </div>
+                <div class="form-group form-floating mb-4">
+                    <input type="password" class="form-control" placeholder="Contraseña" name="contrasennia" id="contrasennia" required />
+                    <label class="form-label">Contraseña</label>
+                </div>
+                <div class="form-group text-center">
+                    <a href="@Url.Action("Index", "Home")" type="submit" class="btn btn-primary btn-lg" id="btnLogin" name="btnLogin" style="background-color:#1F283E; border-color: #1F283E;">
+                        Iniciar Sesión
+                    </a>
+                    <div class="mt-3">
+                        <a href="@Url.Action("RecuperarContrasenna", "Autenticacion")" class="mt-5 text-center under">¿Olvidó su contraseña?</a>
+                    </div>
+                </div>
+            </form>
+            <a href="@Url.Action("RegistroEstudiante", "Autenticacion")" class="mt-4 text-center under">¿No tenés Cuenta? <br> ¡Crea una ya! </a>
+        </div>
+    </div>
+</section>
