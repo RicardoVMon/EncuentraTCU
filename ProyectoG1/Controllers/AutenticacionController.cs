@@ -17,5 +17,15 @@ namespace ProyectoG1.Controllers
         {
             return View();
         }
+
+        public ActionResult RegistroEstudiante()
+        {
+            return View();
+        }
+
+        public ActionResult RegistroInstitucion()
+        {
+            return View();
+        }
     }
 }

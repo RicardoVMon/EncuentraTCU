@@ -1,0 +1,84 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutExterno.cshtml";
+}
+
+<nav class="navbar navbar-dark navbar-extend p-2" style="background-color: #1A2035;">
+    <div class="container-fluid">
+        <a class="navbar-brand fs-4 fw-bold" href="@Url.Action("Ingresar","Autenticacion")">
+            <i class="fa-solid fa-hand-holding-heart mx-2"></i> Proyectos reales, progreso para todos.
+        </a>
+    </div>
+</nav>
+
+<section class="container-fluid d-flex flex-grow-1 px-0">
+    <div class="col">
+        <img src="https://images.pexels.com/photos/5965839/pexels-photo-5965839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" style="object-fit: cover; height: 100%">
+    </div>
+    <div class="col d-flex align-items-center">
+        <div class="container-fluid d-flex flex-column">
+            <form class="pb-4 border-bottom px-5" action="" method="POST">
+                <div class="text-center fw-bold" style="font-size: 10vh; color: #1F283E;">EncuentraTCU</div>
+                <h2 class="mb-5 text-center" style="color: #1F283E;">Registro de Estudiante</h2>
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-group form-floating">
+                            <input type="text" class="form-control" placeholder="Cedula" name="cedula" id="cedula" onkeyup="consultarNombreUsuario();" required />
+                            <label class="form-label">Cedula</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <div class="form-group form-floating">
+                            <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre" readonly required />
+                            <label class="form-label">Nombre</label>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="form-group form-floating">
+                            <input type="text" class="form-control" placeholder="Apellidos" name="apellidos" id="apellidos" readonly required />
+                            <label class="form-label">Apellidos</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-7">
+                        <div class="form-group form-floating">
+                            <input type="text" class="form-control" placeholder="Correo" name="correo" id="correo" required />
+                            <label class="form-label">Correo Electrónico</label>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form-group form-floating">
+                            <select name="genero" id="genero" class="form-control" required>
+                                <option value="">Seleccione su género</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <label for="genero" class="form-label">Género</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group form-floating mb-4">
+                    <input type="password" class="form-control" placeholder="Contraseña" name="contrasennia" id="contrasennia" required />
+                    <label class="form-label">Contraseña</label>
+                </div>
+                <div class="form-group text-center">
+                    <a href="@Url.Action("Index", "Home")" type="submit" id="btnRegistrar" name="btnRegistrar" class="btn btn-primary btn-lg" style="background-color:#1F283E; border-color: #1F283E;">
+                        Registrarse
+                    </a>
+                    <div class="mt-3">
+                        <a href="@Url.Action("RecuperarContrasenna", "Autenticacion")" class="mt-5 text-center under">¿Olvidó su contraseña?</a>
+                    </div>
+                    <div class="mt-3">
+                        <a href="@Url.Action("RegistroInstitucion", "Autenticacion")" class="mt-5 text-center under">O Si Sos Una Institución</a>
+                    </div>
+                </div>
+            </form>
+            <a href="@Url.Action("Ingresar", "Autenticacion")" class="mt-4 text-center under">¿Ya tenés una cuenta? <br> ¡Inicia sesión! </a>
+        </div>
+    </div>
+</section>

@@ -1,31 +1,30 @@
-﻿
-@{
+﻿@{
     Layout = "~/Views/Shared/_LayoutExterno.cshtml";
 }
 
 <div class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-dark navbar-expand p-2" style="background-color: #1A2035;">
         <div class="container-fluid">
-            <a class="navbar-brand fs-4 fw-bold" href="@Url.Action("Ingresar", "Usuario")">
-                <i class="fa fa-bell mx-2"></i> Slogan
+            <a class="navbar-brand fs-4 fw-bold" href="@Url.Action("Ingresar", "Autenticacion")">
+                <i class="fa-solid fa-hand-holding-heart mx-2"></i> Proyectos reales, progreso para todos.
             </a>
         </div>
     </nav>
 
     <section class="container-fluid d-flex flex-grow-1 px-0">
         <div class="col">
-            <img src="https://images.pexels.com/photos/3862153/pexels-photo-3862153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" style="object-fit: cover; height: 100%;" />
+            <img src="https://images.pexels.com/photos/3183190/pexels-photo-3183190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" style="object-fit: cover; height: 100%;" />
         </div>
         <div class="col d-flex align-items-center">
             <div class="container-fluid d-flex flex-column">
                 <form class="pb-5 border-bottom px-5" asp-action="RecuperarCuenta" method="post">
-                    <div class="text-center fw-bold" style="font-size: 10vh; color: #1F283E;">Web App</div>
+                    <div class="text-center fw-bold" style="font-size: 10vh; color: #1F283E;">EncuentraTCU</div>
                     <h2 class="mb-3 text-center" style="color: #1F283E;">Recuperación de Contraseña</h2>
-                    <p class="mb-4 text-center">Ingresá su cédula para iniciar el proceso de recuperación.</p>
+                    <p class="mb-4 text-center">Ingresá tu correo para iniciar el proceso de recuperación.</p>
 
                     <div class="form-group form-floating mb-4">
-                        <label for="Cedula">Cédula</label>
-                        <input type="text" class="form-control" id="Cedula" required />
+                        <input type="text" class="form-control" placeholder="Correo Electrónico" name="correo" id="correo" required />
+                        <label class="form-label">Correo Electrónico</label>
                     </div>
 
                     <div class="form-group text-center">
@@ -34,13 +33,9 @@
                         </button>
                     </div>
                 </form>
-                <a href="@Url.Action("Registro", "Autenticacion")" class="mt-4 text-center">¿No tenés Cuenta? <br> ¡Crea una ya!</a>
+                <a href="@Url.Action("RegistroEstudiante", "Autenticacion")" class="mt-4 text-center">¿No tenés Cuenta? <br> ¡Crea una ya!</a>
                 <a href="@Url.Action("Ingresar", "Autenticacion")" class="mt-4 text-center">Si ya tenés una cuenta, <br> Iniciá Sesión</a>
             </div>
         </div>
     </section>
 </div>
-
-
-
-
