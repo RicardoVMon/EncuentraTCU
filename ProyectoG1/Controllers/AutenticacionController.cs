@@ -12,5 +12,10 @@ namespace ProyectoG1.Controllers
         {
             return View();
         }
+
+        public ActionResult Ingresar()
+        {
+            return View();
+        }
     }
 }
