@@ -8,6 +8,11 @@ namespace ProyectoG1.Controllers
 {
     public class AutenticacionController : Controller
     {
+
+        public ActionResult Registro()
+        {
+            return View();
+        }
         public ActionResult RecuperarContrasenna()
         {
             return View();

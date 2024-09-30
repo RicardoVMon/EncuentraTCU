@@ -21,11 +21,11 @@
                 <form class="pb-5 border-bottom px-5" asp-action="RecuperarCuenta" method="post">
                     <div class="text-center fw-bold" style="font-size: 10vh; color: #1F283E;">Web App</div>
                     <h2 class="mb-3 text-center" style="color: #1F283E;">Recuperación de Contraseña</h2>
-                    <p class="mb-4 text-center">Ingresá tu usuario para iniciar el proceso de recuperación.</p>
+                    <p class="mb-4 text-center">Ingresá tu correo para iniciar el proceso de recuperación.</p>
 
                     <div class="form-group form-floating mb-4">
-                        <label for="Usuario">Usuario</label>
-                        <input type="text" class="form-control" id="Usuario" required />
+                        <input type="text" class="form-control" placeholder="Correo Electrónico" name="correo" id="correo" required />
+                        <label class="form-label">Correo Electrónico</label>
                     </div>
 
                     <div class="form-group text-center">
